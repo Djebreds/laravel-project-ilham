@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Game;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class gameController extends Controller
 {
@@ -18,11 +19,11 @@ class gameController extends Controller
 
     public function readGame()
     {
-        $game = Game::all();
+        $game = DB::table('game')->join('game_genre', 'game.id_game', '=', 'game_genre.id_game')->get();
 
         return view('data-game', [
             "title" => "Data Game",
-            "gameData" => $game
+            "game" => $game,
         ]);
     }
 

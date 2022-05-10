@@ -5,7 +5,9 @@ use App\Http\Controllers\genreController;
 use App\Http\Controllers\publisherController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\logAdmin;
-use App\Http\Controllers\controls;
+use App\Http\Controllers\adminDashboardController;
+use App\Http\Controllers\indexController;
+use App\Http\Controllers\logAdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [indexController::class, 'index']);
 
 Route::get('/create-game', [gameController::class, 'CreateGame']);
 
@@ -31,7 +31,7 @@ Route::get('/update-game', [gameController::class, 'updateGame']);
 
 Route::get('/detail-game-admin/{slug}', [gameController::class, 'detailGameAdmin']);
 
-Route::get('/admin-dashboard', [controls::class, 'adminDashboard']);
+Route::get('/admin-dashboard', [adminDashboardController::class, 'adminDashboard']);
 
 Route::get('/data-genre', [genreController::class, 'readGenre']);
 
@@ -45,4 +45,4 @@ Route::get('/data-admin', [adminController::class, 'readAdmin']);
 
 Route::get('/register-admin', [adminController::class, 'createAdmin']);
 
-Route::get('/login-admin', [logAdmin::class, 'loginAdmin']);
+Route::get('/login-admin', [logAdminController::class, 'loginAdmin']);
