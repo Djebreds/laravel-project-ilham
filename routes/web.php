@@ -23,9 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [indexController::class, 'index']);
 
-Route::get('/create-game', [gameController::class, 'CreateGame']);
+Route::get('/admin-dashboard/data-game/create-game', [gameController::class, 'CreateGame']);
 
-Route::get('/data-game', [gameController::class, 'readGame']);
+Route::get('/admin-dashboard/data-game', [gameController::class, 'readGame']);
 
 Route::get('/update-game', [gameController::class, 'updateGame']);
 
@@ -33,16 +33,18 @@ Route::get('/detail-game-admin/{slug}', [gameController::class, 'detailGameAdmin
 
 Route::get('/admin-dashboard', [adminDashboardController::class, 'adminDashboard']);
 
-Route::get('/data-genre', [genreController::class, 'readGenre']);
+Route::get('/admin-dashboard/data-genre', [genreController::class, 'readGenre']);
 
-Route::get('/data-publisher', [publisherController::class, 'readPublisher']);
+Route::get('/admin-dashboard/data-publisher', [publisherController::class, 'readPublisher']);
 
 Route::get('/create-publisher', [publisherController::class, 'createPublisher']);
 
 Route::get('/update-publisher', [publisherController::class, 'updatePublisher']);
 
-Route::get('/data-admin', [adminController::class, 'readAdmin']);
+Route::get('/admin-dashboard/data-admin', [adminController::class, 'readAdmin']);
 
 Route::get('/register-admin', [adminController::class, 'createAdmin']);
 
 Route::get('/login-admin', [logAdminController::class, 'loginAdmin']);
+
+Route::post('/admin-dashboard/data-genre/store', 'genreController@store');

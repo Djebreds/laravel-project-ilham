@@ -12,7 +12,8 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-4">
-                            <form class="" action="" method="post">
+                            <form class="" action="/admin-dashboard/data-genre/store" method="post">
+                                {{ csrf_field() }}
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="tambah_genre"
                                         placeholder="tambah genre baru" autocomplete="off" required>

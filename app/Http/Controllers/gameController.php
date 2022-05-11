@@ -12,8 +12,29 @@ class gameController extends Controller
 {
     public function createGame()
     {
+        $genreList = DB::table('genre')->orderBy('nama_genre')->get();
+        $pubList = DB::table('publisher')->orderBy('nama_publisher')->get();
+
         return view('create-game', [
-            "title" => "Tambah Game"
+            "title" => "Tambah Game",
+            "genreList" => $genreList,
+            "pubList" => $pubList
+
+        ]);
+    }
+
+    public function storeGame(Request $request)
+    {
+        DB::table('game')->insert([
+            'nama_game' => $request->nama_game,
+            'tgl_rilis' => $request->tgl_rilis,
+            'nama_publisher' => $request->publisher,
+            'desc_game' => $request->desc_game
+        ]);
+
+        $this->validate($request, [
+            'nama_game' => 'required',
+
         ]);
     }
 

@@ -16,7 +16,7 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="/create-game"><button type="button" class="btn btn-sm"
+                                <a href="/admin-dashboard/data-game/create-game"><button type="button" class="btn btn-sm"
                                         style="background-color: #b88cf5; color: white;">Tambahkan data game</button>
                                 </a>
                             </div>
@@ -33,8 +33,8 @@
                         </div>
                     </div>
                     <!-- <div class="btn">
-                                              <a href="read_game.php" class="btn mx-6 btn-primary">tampilkan semua data</a>
-                                             </div> -->
+                                                  <a href="read_game.php" class="btn mx-6 btn-primary">tampilkan semua data</a>
+                                                 </div> -->
 
                 </form>
             </div>

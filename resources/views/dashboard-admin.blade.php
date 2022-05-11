@@ -87,7 +87,7 @@
             <div class="col-md-5">
                 <div class="card me-3 shadow">
                     <div class="card-header">
-                        <a href="/data-game" style="color: #c499ff; text-decoration: none">
+                        <a href="/admin-dashboard/data-game" style="color: #c499ff; text-decoration: none">
                             <h6>Tabel Game</h6>
                         </a>
                     </div>
@@ -125,7 +125,7 @@
             <div class="col-md-4 pe-3">
                 <div class="card shadow">
                     <div class="card-header">
-                        <a href="/data-publisher" style="color: #c499ff; text-decoration: none">
+                        <a href="/admin-dashboard/data-publisher" style="color: #c499ff; text-decoration: none">
                             <h6>Tabel Publisher</h6>
                         </a>
                     </div>
@@ -163,7 +163,7 @@
             <div class="col-md-3 pe-3">
                 <div class="card shadow">
                     <div class="card-header">
-                        <a href="/data-genre" style="color: #c499ff; text-decoration: none">
+                        <a href="/admin-dashboard/data-genre" style="color: #c499ff; text-decoration: none">
                             <h6>Tabel Genre</h6>
                         </a>
                     </div>

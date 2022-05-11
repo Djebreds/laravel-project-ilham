@@ -19,4 +19,13 @@ class genreController extends Controller
             "genre" => $genre
         ]);
     }
+
+    public function store(Request $request)
+    {
+        DB::table('genre')->insert([
+            'nama_genre' => $request->tambah_genre
+        ]);
+
+        return redirect('/admin-dashboard/data-genre');
+    }
 }
